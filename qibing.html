@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#basediv{
+				position: absolute;
+				width: 215px;
+				height: 280px;
+				background-color: beige;
+				border: 2px;
+				border-style: solid;
+				border-color: bisque;
+				border-radius: 20px;
+				top:5px;
+				left: 5px;
+			}
+			/*左一绿*/
+			#lv1-1{
+				position: absolute;
+				background-color: darkgreen;
+				width: 56px;
+				height: 56px;
+				border-radius: 50px;
+				left: 35px;
+				top: 35px;
+			}
+			#lv1-2{
+				position: absolute;
+				background-color: mediumseagreen;
+				width: 44px;
+				height: 44px;
+				border-radius: 50px;
+				left: 41px;
+				top: 41px;
+			}
+			#lv1-3{
+				position: absolute;
+				background-color: darkgreen;
+				width: 38px;
+				height: 38px;
+				border-radius: 50px;
+				left: 44px;
+				top: 44px;
+			}
+			#lv1-4{
+				position: absolute;
+				background-color: mediumseagreen;
+				width: 30px;
+				height: 30px;
+				border-radius: 50px;
+				left: 48px;
+				top: 48px;
+			}
+			/*左一绿*/
+			#lv1-5{
+				position: absolute;
+				background-color: darkgreen;
+				width: 24px;
+				height: 24px;
+				border-radius: 50px;
+				left: 51px;
+				top: 51px;
+			}
+			#lv1-6{
+				position: absolute;
+				background-color: mediumseagreen;
+				width: 18px;
+				height: 18px;
+				border-radius: 50px;
+				left: 54px;
+				top: 54px;
+			}
+			#lv1-7{
+				position: absolute;
+				background-color: darkgreen;
+				width: 12px;
+				height: 12px;
+				border-radius: 50px;
+				left: 57px;
+				top: 57px;
+			}
+			/*左二绿*/
+			#lv2-1{
+				position: absolute;
+				background-color: darkgreen;
+				width: 56px;
+				height: 56px;
+				border-radius: 50px;
+				left: 90px;
+				top: 64px;
+			}
+			#lv2-2{
+				position: absolute;
+				background-color: mediumseagreen;
+				width: 44px;
+				height: 44px;
+				border-radius: 50px;
+				left: 96px;
+				top: 70px;
+			}
+			#lv2-3{
+				position: absolute;
+				background-color: darkgreen;
+				width: 38px;
+				height: 38px;
+				border-radius: 50px;
+				left: 99px;
+				top: 73px;
+			}
+			#lv2-4{
+				position: absolute;
+				background-color: mediumseagreen;
+				width: 30px;
+				height: 30px;
+				border-radius: 50px;
+				left: 103px;
+				top: 77px;
+			}
+			#lv2-5{
+				position: absolute;
+				background-color: darkgreen;
+				width: 24px;
+				height: 24px;
+				border-radius: 50px;
+				left: 106px;
+				top: 80px;
+			}
+			#lv2-6{
+				position: absolute;
+				background-color: mediumseagreen;
+				width: 18px;
+				height: 18px;
+				border-radius: 50px;
+				left: 109px;
+				top: 83px;
+			}
+			#lv2-7{
+				position: absolute;
+				background-color: darkgreen;
+				width: 12px;
+				height: 12px;
+				border-radius: 50px;
+				left: 112px;
+				top: 86px;
+			}
+			/*左三绿*/
+			#lv3-1{
+				position: absolute;
+				background-color: darkgreen;
+				width: 56px;
+				height: 56px;
+				border-radius: 50px;
+				left: 145px;
+				top: 93px;
+			}
+			#lv3-2{
+				position: absolute;
+				background-color: mediumseagreen;
+				width: 44px;
+				height: 44px;
+				border-radius: 50px;
+				left: 151px;
+				top: 99px;
+			}
+			#lv3-3{
+				position: absolute;
+				background-color: darkgreen;
+				width: 38px;
+				height: 38px;
+				border-radius: 50px;
+				left: 154px;
+				top: 102px;
+			}
+			#lv3-4{
+				position: absolute;
+				background-color: mediumseagreen;
+				width: 30px;
+				height: 30px;
+				border-radius: 50px;
+				left: 158px;
+				top: 106px;
+			}
+			#lv3-5{
+				position: absolute;
+				background-color: darkgreen;
+				width: 24px;
+				height: 24px;
+				border-radius: 50px;
+				left: 161px;
+				top: 109px;
+			}
+			#lv3-6{
+				position: absolute;
+				background-color: mediumseagreen;
+				width: 18px;
+				height: 18px;
+				border-radius: 50px;
+				left: 164px;
+				top: 112px;
+			}
+			#lv3-7{
+				position: absolute;
+				background-color: darkgreen;
+				width: 12px;
+				height: 12px;
+				border-radius: 50px;
+				left: 167px;
+				top: 115px;
+			}
+			
+			/*左上红*/
+			#h1-1{
+				position: absolute;
+				background-color: #DC143C;
+				width: 56px;
+				height: 56px;
+				border-radius: 50px;
+				left: 54px;
+				top: 150px;
+			}
+			#h1-2{
+				position: absolute;
+				background-color: #FFE4C4;
+				width: 44px;
+				height: 44px;
+				border-radius: 50px;
+				left: 60px;
+				top: 156px;
+			}
+			#h1-3{
+				position: absolute;
+				background-color: #DC143C;
+				width: 38px;
+				height: 38px;
+				border-radius: 50px;
+				left: 63px;
+				top: 159px;
+			}
+			#h1-4{
+				position: absolute;
+				background-color: #FFE4C4;
+				width: 30px;
+				height: 30px;
+				border-radius: 50px;
+				left: 67px;
+				top: 163px;
+			}
+			#h1-5{
+				position: absolute;
+				background-color: #DC143C;
+				width: 24px;
+				height: 24px;
+				border-radius: 50px;
+				left: 70px;
+				top: 166px;
+			}
+			#h1-6{
+				position: absolute;
+				background-color: #FFE4C4;
+				width: 18px;
+				height: 18px;
+				border-radius: 50px;
+				left: 73px;
+				top: 169px;
+			}
+			#h1-7{
+				position: absolute;
+				background-color: #DC143C;
+				width: 12px;
+				height: 12px;
+				border-radius: 50px;
+				left: 76px;
+				top: 172px;
+			}
+			/*左下红*/
+			#h2-1{
+				position: absolute;
+				background-color: #DC143C;
+				width: 56px;
+				height: 56px;
+				border-radius: 50px;
+				left: 54px;
+				top: 204px;
+			}
+			#h2-2{
+				position: absolute;
+				background-color: #FFE4C4;
+				width: 44px;
+				height: 44px;
+				border-radius: 50px;
+				left: 60px;
+				top: 210px;
+			}
+			#h2-3{
+				position: absolute;
+				background-color: #DC143C;
+				width: 38px;
+				height: 38px;
+				border-radius: 50px;
+				left: 63px;
+				top: 213px;
+			}
+			#h2-4{
+				position: absolute;
+				background-color: #FFE4C4;
+				width: 30px;
+				height: 30px;
+				border-radius: 50px;
+				left: 67px;
+				top: 216px;
+			}
+			#h2-5{
+				position: absolute;
+				background-color: #DC143C;
+				width: 24px;
+				height: 24px;
+				border-radius: 50px;
+				left: 70px;
+				top: 219px;
+			}
+			#h2-6{
+				position: absolute;
+				background-color: #FFE4C4;
+				width: 18px;
+				height: 18px;
+				border-radius: 50px;
+				left: 73px;
+				top: 222px;
+			}
+			#h2-7{
+				position: absolute;
+				background-color: #DC143C;
+				width: 12px;
+				height: 12px;
+				border-radius: 50px;
+				left: 76px;
+				top: 225px;
+			}
+			/*右上红*/
+			#h3-1{
+				position: absolute;
+				background-color: #DC143C;
+				width: 56px;
+				height: 56px;
+				border-radius: 50px;
+				left: 108px;
+				top: 150px;
+			}
+			#h3-2{
+				position: absolute;
+				background-color: #FFE4C4;
+				width: 44px;
+				height: 44px;
+				border-radius: 50px;
+				left: 114px;
+				top: 156px;
+			}
+			#h3-3{
+				position: absolute;
+				background-color: #DC143C;
+				width: 38px;
+				height: 38px;
+				border-radius: 50px;
+				left: 117px;
+				top: 159px;
+			}
+			#h3-4{
+				position: absolute;
+				background-color: #FFE4C4;
+				width: 30px;
+				height: 30px;
+				border-radius: 50px;
+				left: 120px;
+				top: 163px;
+			}
+			#h3-5{
+				position: absolute;
+				background-color: #DC143C;
+				width: 24px;
+				height: 24px;
+				border-radius: 50px;
+				left: 123px;
+				top: 166px;
+			}
+			#h3-6{
+				position: absolute;
+				background-color: #FFE4C4;
+				width: 18px;
+				height: 18px;
+				border-radius: 50px;
+				left: 126px;
+				top: 169px;
+			}
+			#h3-7{
+				position: absolute;
+				background-color: #DC143C;
+				width: 12px;
+				height: 12px;
+				border-radius: 50px;
+				left: 129px;
+				top: 172px;
+			}
+			/*右下红*/
+			#h4-1{
+				position: absolute;
+				background-color: #DC143C;
+				width: 56px;
+				height: 56px;
+				border-radius: 50px;
+				left: 108px;
+				top: 204px;
+			}
+			#h4-2{
+				position: absolute;
+				background-color: #FFE4C4;
+				width: 44px;
+				height: 44px;
+				border-radius: 50px;
+				left: 114px;
+				top: 210px;
+			}
+			#h4-3{
+				position: absolute;
+				background-color: #DC143C;
+				width: 38px;
+				height: 38px;
+				border-radius: 50px;
+				left: 117px;
+				top: 213px;
+			}
+			#h4-4{
+				position: absolute;
+				background-color: #FFE4C4;
+				width: 30px;
+				height: 30px;
+				border-radius: 50px;
+				left: 121px;
+				top: 217px;
+			}
+			#h4-5{
+				position: absolute;
+				background-color: #DC143C;
+				width: 24px;
+				height: 24px;
+				border-radius: 50px;
+				left: 124px;
+				top: 220px;
+			}
+			#h4-6{
+				position: absolute;
+				background-color: #FFE4C4;
+				width: 18px;
+				height: 18px;
+				border-radius: 50px;
+				left: 127px;
+				top: 223px;
+			}
+			#h4-7{
+				position: absolute;
+				background-color: #DC143C;
+				width: 12px;
+				height: 12px;
+				border-radius: 50px;
+				left: 130px;
+				top: 226px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--背景-->
+		<div id="basediv"></div>
+		<!--左一绿-->
+		<div id="lv1-1"></div>
+		<div id="lv1-2"></div>
+		<div id="lv1-3"></div>
+		<div id="lv1-4"></div>
+		<div id="lv1-5"></div>
+		<div id="lv1-6"></div>
+		<div id="lv1-7"></div>
+		<!--左二绿-->
+		<div id="lv2-1"></div>
+		<div id="lv2-2"></div>
+		<div id="lv2-3"></div>
+		<div id="lv2-4"></div>
+		<div id="lv2-5"></div>
+		<div id="lv2-6"></div>
+		<div id="lv2-7"></div>
+		<!--左三绿-->
+		<div id="lv3-1"></div>
+		<div id="lv3-2"></div>
+		<div id="lv3-3"></div>
+		<div id="lv3-4"></div>
+		<div id="lv3-5"></div>
+		<div id="lv3-6"></div>
+		<div id="lv3-7"></div>
+		<!--左上红-->
+		<div id="h1-1"></div>
+		<div id="h1-2"></div>
+		<div id="h1-3"></div>
+		<div id="h1-4"></div>
+		<div id="h1-5"></div>
+		<div id="h1-6"></div>
+		<div id="h1-7"></div>
+		<!--左下红-->
+		<div id="h2-1"></div>
+		<div id="h2-2"></div>
+		<div id="h2-3"></div>
+		<div id="h2-4"></div>
+		<div id="h2-5"></div>
+		<div id="h2-6"></div>
+		<div id="h2-7"></div>
+		<!--右上红-->
+		<div id="h3-1"></div>
+		<div id="h3-2"></div>
+		<div id="h3-3"></div>
+		<div id="h3-4"></div>
+		<div id="h3-5"></div>
+		<div id="h3-6"></div>
+		<div id="h3-7"></div>
+		<!--右下红-->
+		<div id="h4-1"></div>
+		<div id="h4-2"></div>
+		<div id="h4-3"></div>
+		<div id="h4-4"></div>
+		<div id="h4-5"></div>
+		<div id="h4-6"></div>
+		<div id="h4-7"></div>
+	</body>
+</html>

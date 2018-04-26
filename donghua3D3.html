@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+			}
+			body{
+				background: url(img/63c9e154jw1ez3sxkfhaij20ku0rswhc.jpg) ;
+				background-size: 100%;
+			}
+			div{
+				width: 280px;
+				height: 400px;
+				position: fixed;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+				transform-style: preserve-3d;
+				animation: play 60s linear infinite;
+			}
+			@keyframes play{
+				0%{
+					transform: rotateX(0deg) rotateY(0deg);
+				}
+				25%{
+					transform: rotateX(20deg) rotateY(150deg);
+				}
+				50%{
+					transform: rotateX(0deg) rotateY(330deg);
+				}
+				75%{
+					transform: rotateX(-20deg) rotateY(510deg);
+				}
+				100%{
+					transform: rotateX(0deg) rotateY(690deg);
+				}
+			}
+			
+			div img{
+				width: 280px;
+				height: 400px;
+				position: absolute;
+			}
+			
+			div img:nth-child(1){transform: rotateY(0deg) translatez(650px);}
+			div img:nth-child(2){transform: rotateY(36deg) translatez(650px);}
+			div img:nth-child(3){transform: rotateY(72deg) translatez(650px);}
+			div img:nth-child(4){transform: rotateY(108deg) translatez(650px);}
+			div img:nth-child(5){transform: rotateY(144deg) translatez(650px);}
+			div img:nth-child(6){transform: rotateY(180deg) translatez(650px);}
+			div img:nth-child(7){transform: rotateY(216deg) translatez(650px);}
+			div img:nth-child(8){transform: rotateY(252deg) translatez(650px);}
+			div img:nth-child(9){transform: rotateY(288deg) translatez(650px);}
+			div img:nth-child(10){transform: rotateY(324deg) translatez(650px);}
+		</style>
+	</head>
+	<body>
+		<div>
+		<img src="img/微信图片_20180426200959.jpg"/>
+		<img src="img/微信图片_20180426201014.jpg"/>
+		<img src="img/微信图片_20180426201020.jpg"/>
+		<img src="img/微信图片_20180426201025.jpg"/>
+		<img src="img/微信图片_20180426201029.jpg"/>
+		<img src="img/微信图片_20180426201033.jpg"/>
+		<img src="img/微信图片_20180426201037.jpg"/>
+		<img src="img/微信图片_20180426201040.jpg"/>
+		<img src="img/微信图片_20180426201044.jpg"/>
+		<img src="img/微信图片_20180426201049.jpg"/>
+		</div>
+	</body>
+</html>

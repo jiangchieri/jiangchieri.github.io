@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//裆页面滚动时，就运行onscroll指向的方法
+			document.onscroll=function positionBody(){
+				var thisScrollTop=document.body.scrollTop+document.documentElement.scrollTop;
+				document.getElementById("guanggao").style.position="absolute";
+				document.getElementById("guanggao").style.top=(thisScrollTop+100)+"px";
+			}
+			
+			function closeGuangGao(){
+				document.getElementById("guanggao").style.display="none";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="guanggao" style="width: 210px;height: 125px;">
+			<div align="right" >
+				<img src="img/timg.jpg"  width="25px" height="25px" onclick="closeGuangGao()" />
+			</div>
+			<img src="img/u=438352698,3918340923&fm=200&gp=0.jpg" height="100px" width="200px">
+		</div>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>2</p>
+		<p>2</p>
+		<p>2</p>
+		<p>2</p>
+		<p>2</p>
+		<p>2</p>
+		<p>2</p>
+		<p>2</p>
+	    <p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>2</p>
+		<p>2</p>
+		<p>2</p>
+		<p>2</p>
+		<p>2</p>
+		<p>2</p>
+		<p>2</p>
+		<p>2</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>2</p>
+		<p>2</p>
+		<p>2</p>
+		<p>2</p>
+		<p>2</p>
+		<p>2</p>
+		<p>2</p>
+		<p>2</p>
+	</body>
+</html>

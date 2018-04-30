@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function myFoucus(){
+				var ss=document.getElementById("kh").value;
+				if(ss=="格式：10xxxxx"){
+					document.getElementById("kh").value="";
+				}
+			}
+			function checkCarNo(){
+				var cardNo=document.getElementById("kh").value;
+				if(!cardNo.startsWith(10)){
+					alert("格式错误，请以10开头");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		卡号：<input id="kh" type="text" value="格式：10xxxxx" onfocus="myFoucus()" onblur="checkCardNo()">
+		<br/>
+		密码：<input type="password">
+	</body>
+</html>

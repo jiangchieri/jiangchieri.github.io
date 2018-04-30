@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>定位鼠标</title>
+		<script>
+			//裆鼠标移动的时候就运行onmousemove指向的方法
+			document.onmousemove=function positionMouse(event){
+				
+				//有一些浏览器是在window里，window.event
+				event=window.event||event;
+				//获取x坐标
+				var x=event.clientX;
+				var y=event.clientY;
+				document.getElementById("x").innerHTML=x;
+				document.getElementById("y").innerHTML=y;
+			}
+		</script>
+	</head>
+	<body>
+		<h3>鼠标定位</h3>
+		<div id="id1"></div>
+		<p>X轴坐标：<span id="x"></span></p>
+		<p>Y轴坐标：<span id="y"></span></p>
+	</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="game" onmousedown="onGameDown();"></canvas>
+		<script>
+			var w=260;
+			var h=400;
+			//别踩白块  
+			function Rect(y,arr){
+				this.y=y;
+				this.arr=arr;
+			}
+			var a=new Array();
+			
+			//0代表白，1代表红，2代表黑，>=3都是灰
+			for(var i=0;i<6;i++){
+				var arr=new Array();
+				for(var j=0;j<4;j++){
+					arr[j]=0;
+				}
+				var n=Math.floor(Math.random()*4);
+				arr[n]=2;
+				//每一行的初识状态
+				a[i]=new Rect(i*100-200,arr);
+			}
+			
+			var game=document.getElementById("game");
+			game.width=w;
+			game.height=h;
+			var canvas=game.getContext("2d");
+			canvas.fillStyle="#000000";
+			canvas.fillRect(0,0,w,h);
+			
+			//这个方法用于绘制游戏界面
+			function drawGame(){
+				for(var i=0;i<a.length;i++){
+					for(var j=0;j<a[i].arr.length;j++){
+						switch(a[i].arr[j]){
+							case 0:
+								canvas.fillStyle="#ffffff";
+								break;
+							case 1:
+								canvas.fillStyle="#ff0000";
+								break;
+							case 2:
+								canvas.fillStyle="#000000";
+								break;
+							case 3:
+								canvas.fillStyle="#dddddd";
+								break;
+							default:
+								canvas.fillStyle="#dddddd";
+								break;
+						}
+						canvas.fillRect(j*(w/4),a[i].y,(w/4),(h/4));
+						canvas.strokeStyle="#666666";
+						canvas.strokeRect(j*(w/4),a[i].y,(w/4),(h/4));
+					}
+				}
+			}
+			
+			//让游戏动起来
+			function goGame(){
+				drawGame();
+				for(var i=0;i<a.length;i++){
+					//向下移动
+					a[i].y++;
+					if(a[i].y>h){
+						a[i].y-=h/4*6;
+						//所有的都变白
+						for(var j=0;j<4;j++){
+							a[i].arr[j]=0;
+						}
+						//随机一个变黑
+						var n=Math.floor(Math.random()*4);
+						a[i].arr[n]=2;
+					}
+				}
+			}
+			
+			function onGameDown(event){
+				event=event||window.event;
+				//获取x，y
+				var x=event.clientX;
+				var y=event.clientY;
+				
+				for(var i=0;i<a.length;i++){
+					if(a[i].y<y&&a[i].y+h/4>y){
+						var j=Math.floor(x/(w/4));
+						a[i].arr[j]++;
+						if(a[i].arr[j]==1){
+							//gameover
+							clearInterval(running);
+						}else if(a[i].arr[j]==3){
+							score++;
+							document.getElementById("score").innerHTML=score;
+						}
+					}
+				}
+				drawGame();
+			}
+			
+			var score=0;
+			var running=null;
+			running=setInterval("goGame();",1);
+		</script>
+		<div id="score"></div>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var start=new Date("2018/3/19");
+			function f(){
+				var end=new Date();
+				//日期类型相剪后是一个毫秒为单位的值
+				var total=end-start;
+				var minute=parseInt(total/1000/60);
+				var second=parseInt(total/1000)%60;
+				document.getElementById("div").innerHTML=minute+"分"+second+"秒";
+				//setTimeout("f()",1000);
+			}
+			
+			//每隔1000毫秒调用一次f()方法，每1000秒执行一次
+			setInterval("f()",1000);
+			//10001毫秒以后调用f()方法，只执行一次
+			//setTimeout("f()",1000);
+		</script>
+	</head>
+	<body>
+		来千峰的时间：<div id="div"></div>
+	</body>
+</html>

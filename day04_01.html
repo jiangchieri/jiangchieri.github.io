@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>验证码1.0</title>
+		<script>
+			//生成一个随机的验证码
+			//num代表验证码的位数
+			function getCodes(num){
+				var arr=["饕","鬄","爨","鬻","蕤","籴","耵","鲻","鼗","瓞","鳎"];
+				var codes="";
+				for(var i=1;i<=num;i++){
+					//随机获取arr的下标
+					var m=Math.floor(Math.random()*arr.length);
+					codes=codes+arr[m];
+				}
+					return codes;
+				}
+				var ma;
+				function setCodes(){
+					ma=getCodes(4);
+					document.getElementById("div").innerHTML=ma;
+				}
+				
+				//验证验证码输入是否正确
+				function checkCodes(){
+					var codes=document.getElementById("txt").value;
+					if(ma!=codes){
+						alert("验证码不正确");
+					}else{
+						alert("验证码正确");
+					}
+				}
+			
+		</script>
+	</head>
+	<body	onload="setCodes()">
+		请输入验证码：
+		<input id="txt" type="text" />
+		<br/>
+		<div id="div" style="display: inline;border: 1px solid;" onclick="setCodes();"></div>
+		<input type="button" value="确定" onclick="checkCodes();"/>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//获取浏览器信息的方法
+			function myBrowser(){
+				//navigator
+				//里面保留的是关于客户端浏览器的信息
+				//它不是html dom对象，而是一个JavaScript对象
+				//浏览器信息包含厂商的名字
+				
+				var userAgent=navigator.userAgent;
+				if(userAgent.indexOf("Opera")>-1){
+					return "Opera";
+				}
+				if(userAgent.indexOf("Firefox")>-1){
+					return "Firefox";
+				}
+				if(userAgent.indexOf("Chrome")>-1){
+					return "Chrome";
+				}
+				if(userAgent.indexOf("Safari")>-1){
+					return "Safari";
+				}
+				if(userAgent.indexOf("IE")>-1){
+					return "IE";
+				}
+			}
+			
+			function ondivclick(){
+				alert(myBrowser());
+			}
+		</script>
+	</head>
+	<body>
+		<div onclick="ondivclick()">
+			<input type="button"  value="判断浏览器类型" />
+		</div>
+	</body>
+</html>

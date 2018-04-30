@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function count(){
+				var v=document.getElementById("area").value;
+				var sheng=140-v.length;
+				if(sheng<0){
+					document.getElementById("area").value=v.substring(0,140);
+					document.getElementById("span").innerHTML="还剩（"+0+"）个字符";
+					return;
+				}
+				if(sheng<=10){
+					doc .getElementById("span").style.color="red";
+				}else{
+					document.getElementById("span").style.color="#000000"
+				}
+				
+				document.getElementById("span").innerHTML="还剩（"+sheng+"）个字符"
+			}
+			
+		</script>
+	</head>
+	<body>
+		<textarea id="area" rows="5" cols="20" onkeyup="count();"></textarea>
+		<span id="span" style="font-size: 20px;">还剩（140）个字符</span>
+	</body>
+</html>

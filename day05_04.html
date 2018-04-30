@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/new_file.js"></script>
+		<script >
+			window.onload=function(){
+				var btn1=document.getElementById("btn1");
+				btn1.onclick=function(){
+					var bool=Util.isLeapYear(2004);
+					alert(bool);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input id="btn1" type="button" value="判断是否是闰年"/>
+	</body>
+</html>
